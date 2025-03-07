@@ -8,12 +8,12 @@ Pod::Spec.new do |s|
 
   s.author       = { "krimpedance" => "info@krimpedance.com" }
   s.requires_arc = true
-  s.platform     = :ios, '12.0'
-  s.ios.deployment_target = '12.0'
+  s.platform     = :ios, '15.0'
+  s.ios.deployment_target = '15.0'
   s.swift_version = '5.3'
 
   s.source       = { :git => "https://github.com/krimpedance/KRProgressHUD.git", :tag => s.version.to_s }
   s.source_files = "KRProgressHUD/**/*.swift"
-
+  s.resource_bundles = {'KRProgressHUD/KRProgressHUD' => ['PrivacyInfo.xcprivacy']}
   s.dependency "KRActivityIndicatorView", "3.0.8"
 end
