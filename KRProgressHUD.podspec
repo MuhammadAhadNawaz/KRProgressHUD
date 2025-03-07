@@ -14,6 +14,9 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/krimpedance/KRProgressHUD.git", :tag => s.version.to_s }
   s.source_files = "KRProgressHUD/**/*.swift"
+  s.ios.deployment_target = '15.0'
+  s.tvos.deployment_target = '15.0'
+  s.resource_bundles = {'KRProgressHUD' => ['PrivacyInfo.xcprivacy']}
 
   s.dependency "KRActivityIndicatorView", "3.0.8"
 end
